@@ -23,8 +23,6 @@ public class Calculo {
 //        System.out.println("Está devendo: " +horasPagar+" horas");
 //        return descontoHoras;
 
-
-
     }
     public double salarioLiquido(double salario, double inss,double irpf,double plano,double horaExtra){
 
