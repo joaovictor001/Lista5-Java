@@ -1,30 +1,25 @@
 public class Calculo {
-    public Double descontoInss(double salario){
+    public static Double descontoInss(double salario){
         salario = salario * 0.20;
         return salario;
 
     }
-    public Double descontoIrpf(double salario){
+    public static Double descontoIrpf(double salario){
         salario = salario * 0.10;
         return salario;
     }
-    public Double descontoPlanoDeSaude(double salario){
+    public static  Double descontoPlanoDeSaude(double salario){
         salario = salario * 0.05;
         return salario;
     }
-    public Double horasExtras(double horas,double salarioBruto){
+    public static Double horasExtras(double horas,double salarioBruto){
+        double valorHoraExtra = salarioBruto / 160;
         if (horas > 160){
             double horasAmais = horas -160;
-            return horasAmais * (salarioBruto/2);
+            return (valorHoraExtra + (valorHoraExtra /2))* horasAmais;
         }return  0.0;
-//        double valorHora = salarioBruto /160;
-//        double horasPagar = 160  -  horas;
-//        double descontoHoras =  horasPagar * valorHora;
-//        System.out.println("Está devendo: " +horasPagar+" horas");
-//        return descontoHoras;
-
     }
-    public double salarioLiquido(double salario, double inss,double irpf,double plano,double horaExtra){
+    public static double salarioLiquido(double salario, double inss,double irpf,double plano,double horaExtra){
 
         salario = salario -inss -irpf -plano + horaExtra;
         return salario;

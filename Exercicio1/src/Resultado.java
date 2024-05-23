@@ -1,10 +1,10 @@
 public class Resultado {
-
-    public String result(Double media){
+    public static void result(Double media){
         if (media >=7){
-            return "Parabéns vc foi aprovado";
+            System.out.println("Parabéns vc foi aprovado");
+
         }
-        return "Voce foi reprovado";
+        System.out.println("Voce foi reprovado");
 
     }
 }

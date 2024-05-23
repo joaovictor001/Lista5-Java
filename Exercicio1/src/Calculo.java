@@ -1,8 +1,9 @@
 public class Calculo {
-    public double MediaAritimetica(EntradaSaida notas){
-        return (notas.getN1()+notas.getN2())/2;
+
+    public static double MediaAritimetica( double n1,double n2){
+        return (n1+n2)/2;
     }
-    public  double MediaPonderada(EntradaSaida notas){
-        return  (notas.getP1()* notas.getN1())+(notas.getP2()* notas.getN2())/(notas.getP1()+ notas.getP2());
+    public static double MediaPonderada(double n1,double n2, double p1,double p2){
+        return  (p1*n1)+(p2*n2)/(p1+ p2);
     }
 }
